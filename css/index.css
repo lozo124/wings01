@@ -1,0 +1,283 @@
+/* Presell Landing Page Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.7;
+}
+
+/* ADVERTORIAL Banner */
+.advert-banner {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 0.1em;
+}
+
+/* Logo Bar */
+.logo-bar {
+  background: #2a5a3a;
+  padding: 12px 16px;
+  text-align: center;
+}
+.logo-bar img { height: 48px; }
+
+/* Sticky Header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: none;
+}
+.sticky-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sticky-header img { height: 40px; }
+.sticky-header .btn-orange {
+  display: inline-block;
+  background: #e85d04;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.sticky-header .btn-orange:hover { background: #d54e03; }
+
+@media (min-width: 1024px) { .sticky-header { display: block; } }
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* Flex layout: article + sidebar */
+.flex-layout { display: flex; gap: 32px; }
+.article-content { flex: 1; min-width: 0; }
+.sidebar { display: none; width: 320px; flex-shrink: 0; }
+
+@media (min-width: 1024px) { .sidebar { display: block; } }
+
+/* Sidebar Card */
+.sidebar-card {
+  position: sticky;
+  top: 96px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.sidebar-card .product-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2a5a3a;
+  margin-bottom: 16px;
+}
+.sidebar-card .product-name a { color: #2a5a3a; text-decoration: none; }
+.sidebar-card img { width: 100%; border-radius: 8px; margin-bottom: 16px; }
+.sidebar-card .gift-label {
+  font-weight: 600;
+  color: #333;
+  margin-top: 16px;
+}
+.sidebar-card .gift-label a { color: #333; text-decoration: none; }
+.sidebar-card .btn-orange {
+  display: block;
+  width: 100%;
+  background: #e85d04;
+  color: #fff;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 16px;
+  text-decoration: none;
+}
+.sidebar-card .btn-orange:hover { background: #d54e03; }
+
+/* Headline */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) { h1 { font-size: 38px; } }
+
+/* Author */
+.author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.author-row img { width: 48px; height: 48px; border-radius: 50%; }
+.author-name { font-weight: 600; color: #1a1a1a; }
+.author-date { font-size: 14px; color: #888; }
+
+/* Images */
+.article-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+/* Article Typography */
+.article-content p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.article-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 32px 0 16px;
+  line-height: 1.3;
+}
+.article-content a {
+  color: #2a5a3a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.article-content strong { color: #1a1a1a; }
+
+/* Quote */
+blockquote.quote-box {
+  font-size: 17px;
+  color: #555;
+  font-style: italic;
+  border-left: 4px solid #c8860a;
+  padding: 12px 16px;
+  background: #fef6e4;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+
+/* Feature Box */
+.feature-box {
+  background: #f0f7f0;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.feature-box p { margin-bottom: 12px; font-size: 16px; }
+
+/* CTA Button */
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: #e85d04;
+  color: #fff;
+  text-align: center;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  margin: 32px 0;
+}
+.cta-btn:hover { background: #d54e03; }
+
+/* Reviews */
+.review-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+}
+.review-card img.review-thumb {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.review-card .verified-icon { width: 20px; height: 20px; }
+.review-rating { font-weight: 600; color: #2a5a3a; }
+.review-text { color: #444; font-style: italic; }
+.review-author { color: #666; margin-top: 8px; }
+
+/* Highlight text */
+.highlight-orange { color: #e85d04; }
+.text-center { text-align: center; }
+.font-semibold { font-weight: 600; }
+
+/* Mobile Bottom CTA */
+.mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  padding: 16px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+.mobile-cta .btn-orange {
+  display: block;
+  width: 100%;
+  background: #e85d04;
+  color: #fff;
+  text-align: center;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.mobile-cta .btn-orange:hover { background: #d54e03; }
+
+@media (min-width: 1024px) { .mobile-cta { display: none; } }
+
+/* Footer */
+.site-footer {
+  background: #1a1a1a;
+  color: #999;
+  padding: 32px 16px;
+  margin-top: 64px;
+}
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.footer-inner a { color: #999; text-decoration: none; }
+.footer-inner a:hover { color: #fff; }
+
+/* 确保 CTA 按钮文字始终为白色，不被 article-content a 覆盖 */
+.article-content .cta-btn,
+.article-content .cta-btn:visited,
+.article-content .cta-btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
